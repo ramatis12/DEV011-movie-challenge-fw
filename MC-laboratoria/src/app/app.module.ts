@@ -7,6 +7,12 @@ import { HomeMCComponent } from './home-mc/home-mc.component';
 import { DetailComponent } from './detail/detail.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { PaginatedComponent } from './paginated/paginated.component';
+import { CleanButtonComponent } from './clean-button/clean-button.component';
+import { HomeButtonComponent } from './home-button/home-button.component';
+import { CategoryFilterComponent } from './category-filter/category-filter.component';
+import { OrderByComponent } from './order-by/order-by.component';
+import { BackButtonComponent } from './back-button/back-button.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +20,13 @@ import { FooterComponent } from './footer/footer.component';
     HomeMCComponent,
     DetailComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PaginatedComponent,
+    CleanButtonComponent,
+    HomeButtonComponent,
+    CategoryFilterComponent,
+    OrderByComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserModule,
