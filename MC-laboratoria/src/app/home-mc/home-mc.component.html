@@ -1,1 +1,12 @@
-<p>home-mc works!</p>
+<html>
+  <app-category-filter></app-category-filter>
+  <app-order-by></app-order-by>
+
+  <ul>
+    <li class="background-card" *ngFor="let item of data[1] | paginate: { itemsPerPage: 4, currentPage: page }">
+        <img src="../../assets/background.jpg" class="background-img">
+        <!-- <img src='{{item.backdrop_path}}' class="cinemaIMG"/> -->
+    </li>
+</ul>
+<app-paginated></app-paginated>
+</html>

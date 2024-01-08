@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { APImovieService } from '../service/apimovie.service';
+
 
 @Component({
   selector: 'app-header',
@@ -8,18 +8,10 @@ import { APImovieService } from '../service/apimovie.service';
 })
 export class HeaderComponent implements OnInit {
 
-  data: any =  {};
-
-  constructor(private apiService: APImovieService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.llenarData()
-  }
-llenarData(){
-  this.apiService.getData().subscribe(data => {
-    this.data = data;
-    console.log(this.data);
     
-  })
-}
+  }
+
 }

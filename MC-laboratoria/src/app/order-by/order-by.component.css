@@ -1,0 +1,9 @@
+.ordenar{
+    position: absolute;
+    top: 132.5px;
+    margin-left: 38%;
+  }
+  select {
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }

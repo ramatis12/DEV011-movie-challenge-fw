@@ -1,0 +1,10 @@
+.clean{
+    width: 120px;
+    height: 30px;
+    color: aliceblue;
+    background-color: blue;
+    border-radius: 20px;
+    border: none;
+    position: absolute;
+    top: 45px;
+ }

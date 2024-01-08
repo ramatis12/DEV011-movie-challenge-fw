@@ -13,6 +13,8 @@ import { HomeButtonComponent } from './home-button/home-button.component';
 import { CategoryFilterComponent } from './category-filter/category-filter.component';
 import { OrderByComponent } from './order-by/order-by.component';
 import { BackButtonComponent } from './back-button/back-button.component';
+import { SearchButtonComponent } from './search-button/search-button.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -26,12 +28,14 @@ import { BackButtonComponent } from './back-button/back-button.component';
     HomeButtonComponent,
     CategoryFilterComponent,
     OrderByComponent,
-    BackButtonComponent
+    BackButtonComponent,
+    SearchButtonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

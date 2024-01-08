@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./paginated.component.css']
 })
 export class PaginatedComponent implements OnInit {
-
+  public page!: number;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,28 +1,20 @@
-body{
+.header{
     background-image: url('../../assets/background.jpg');
     background-repeat: no-repeat;
-    margin-top: -1%;
-    margin-right: -1%;
-    margin-left: -1%;
+    margin: -1% -1%;
     background-size: 100%;
   }
-.home{
-width: 60px;
-height: 60px;
-}
 .cinemaIMG{
     height: 140px;
-    top: 13%;
-    left: 50%;
+    top: 10%;
+    left: 45%;
     transform: translate(-50%, -50%);
     position: absolute;
 }
 .cinemaText{
     height: 80px;
     margin-top: 2%;
-    left: 28%;
+    left: 31%;
     position: relative;
 }
-.clean{
-    color: aliceblue;
-}
+

@@ -1,0 +1,20 @@
+html{
+    background-color: #f6e5eb;
+    margin-top: 20px;
+}
+ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.background-card {
+    width: 18%;
+    list-style-type: none;
+    position: relative;
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 1%;
+  }
+.background-img{
+    width: 100%;
+}

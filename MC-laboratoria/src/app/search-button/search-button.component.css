@@ -1,0 +1,13 @@
+.search{
+    width: 15%;
+    line-height: 30px;
+    position: absolute;
+    margin: 2% 60%;
+    border-radius: 10px;
+}
+.searchImg{
+    width: 2%;
+    position: absolute;
+    margin: 2% 73.5%;
+    border: none;
+}

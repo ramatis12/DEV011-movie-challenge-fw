@@ -1,0 +1,8 @@
+.genero{
+    margin-top: 20px;
+margin-left: 10%;
+  }
+  select {
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
