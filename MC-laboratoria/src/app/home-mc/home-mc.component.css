@@ -13,8 +13,12 @@ ul{
     position: relative;
     text-align: center;
     margin-left: 50px;
-    margin-top: 1%;
+    margin-top: 2%;
   }
 .background-img{
     width: 100%;
+}
+.pagination{
+margin-inline-start: 33%;
+padding: 1%;;
 }

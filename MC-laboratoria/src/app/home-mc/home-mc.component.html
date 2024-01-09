@@ -5,8 +5,13 @@
   <ul>
     <li class="background-card" *ngFor="let item of data[1] | paginate: { itemsPerPage: 4, currentPage: page }">
         <img src="../../assets/background.jpg" class="background-img">
-        <!-- <img src='{{item.backdrop_path}}' class="cinemaIMG"/> -->
+        <img src="{{'https://image.tmdb.org/t/p/w300' + item.poster_path}}" class="cinemaIMG"/>
     </li>
 </ul>
-<app-paginated></app-paginated>
+<div class="pagination">
+  <pagination-controls (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente" class="page"></pagination-controls>
+
+</div>
+
+<!-- <app-paginated></app-paginated> -->
 </html>
