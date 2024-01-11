@@ -17,8 +17,27 @@ ul{
   }
 .background-img{
     width: 100%;
+    height: 105%;
 }
 .pagination{
 margin-inline-start: 33%;
-padding: 1%;;
+padding-top: 3%;
+padding-bottom: 1%;
+}
+.cinemaIMG{
+    position: absolute;
+    z-index: 1;
+    width: 80%;
+    top: 5%;
+    right: 10%;
+}
+span{
+    position: absolute;
+    z-index: 1;
+    right: 0%;
+    top: 87%;
+    width: 100%;
+    font-size: 26px;
+    color: rgb(38, 0, 255);
+    text-shadow: 2px 2px 4px #333;
 }

@@ -6,6 +6,7 @@
     <li class="background-card" *ngFor="let item of data[1] | paginate: { itemsPerPage: 4, currentPage: page }">
         <img src="../../assets/background.jpg" class="background-img">
         <img src="{{'https://image.tmdb.org/t/p/w300' + item.poster_path}}" class="cinemaIMG"/>
+        <span>{{item.title}}</span>
     </li>
 </ul>
 <div class="pagination">
