@@ -15,6 +15,13 @@ import { OrderByComponent } from './order-by/order-by.component';
 import { BackButtonComponent } from './back-button/back-button.component';
 import { SearchButtonComponent } from './search-button/search-button.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: 'home', component: HomeMCComponent },
+  { path: 'detail', component: DetailComponent },
+  // Puedes agregar más rutas según tus necesidades
+];
 
 @NgModule({
   declarations: [
@@ -29,15 +36,17 @@ import {NgxPaginationModule} from 'ngx-pagination';
     CategoryFilterComponent,
     OrderByComponent,
     BackButtonComponent,
-    SearchButtonComponent
+    SearchButtonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [RouterModule]
 })
 export class AppModule { }

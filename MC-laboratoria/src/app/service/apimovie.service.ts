@@ -13,7 +13,7 @@ export class APImovieService {
   // discobery https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc 
   // filtro https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc
   // input https://api.themoviedb.org/3/movie/movie_id?language=en-US
-
+  // https://api.themoviedb.org/3/genre/movie/list?language=en
 
   constructor( private http: HttpClient) { } 
 
