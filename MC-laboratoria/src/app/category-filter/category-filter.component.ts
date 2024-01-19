@@ -1,23 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { APImovieService } from '../service/apimovie.service';
+import { Component } from '@angular/core';
+import { FilterMovieService } from '../service/filter-movie.service';
 
 @Component({
   selector: 'app-category-filter',
   templateUrl: './category-filter.component.html',
   styleUrls: ['./category-filter.component.css']
 })
-export class CategoryFilterComponent implements OnInit {
-  data: any =  {};
+export class CategoryFilterComponent {
+  constructor(private sharedService: FilterMovieService) { }
 
-  constructor(private apiService: APImovieService) { }
+  onCriteriaSelect(selectedCriteria: string): void {
+    this.sharedService.setSelectedCriteria(selectedCriteria);
+  }
 
-  ngOnInit(): void {
-    this.llenarData()
-  }
-  llenarData(){
-    this.apiService.getData().subscribe(data => {
-      this.data = Object.values(data);
-      console.log(this.data);
-    })
-  }
 }

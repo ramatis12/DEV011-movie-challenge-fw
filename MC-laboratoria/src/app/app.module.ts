@@ -16,6 +16,8 @@ import { BackButtonComponent } from './back-button/back-button.component';
 import { SearchButtonComponent } from './search-button/search-button.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from "./category-filter/pipe/filter.pipe";
 
 const routes: Routes = [
   { path: 'home', component: HomeMCComponent },
@@ -37,12 +39,14 @@ const routes: Routes = [
     OrderByComponent,
     BackButtonComponent,
     SearchButtonComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgxPaginationModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

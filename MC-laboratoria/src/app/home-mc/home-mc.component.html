@@ -3,7 +3,7 @@
   <app-order-by></app-order-by>
 
   <ul>
-    <li class="background-card" *ngFor="let item of data[1] | paginate: { itemsPerPage: 4, currentPage: page }">
+    <li class="background-card" *ngFor="let item of data | paginate: { itemsPerPage: 20, currentPage: page } ">
         <img src="../../assets/background.jpg" class="background-img">
         <img src="{{'https://image.tmdb.org/t/p/w300' + item.poster_path}}" class="cinemaIMG"/>
         <span>{{item.title}}</span>
@@ -14,5 +14,6 @@
 
 </div>
 
-<!-- <app-paginated></app-paginated> -->
+<!-- <app-paginated></app-paginated> 
+= (data[1].genre_ids[2] | movieFilter: criteria) -->
 </html>
