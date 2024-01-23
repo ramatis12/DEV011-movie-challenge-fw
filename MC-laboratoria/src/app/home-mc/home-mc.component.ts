@@ -14,15 +14,15 @@ totalResults: number = 0;
 public criteria: string = '';
 public pageSize: number = 4;
 public page: number = 1;
-// public pageChange = new EventEmitter < number >();
+public selectedGenre: number = 18;
 
   constructor(private apiService: APImovieService) { }
 
   ngOnInit(): void {
-    this.llenarData(this.page);
+    this.llenarData(this.page, this.selectedGenre);
   }
-  llenarData(page:number){
-    this.apiService.getData(page).subscribe((data) => {
+  llenarData(page:number, selectedGenre:number){
+    this.apiService.getData(page, selectedGenre).subscribe((data) => {
       this.data = data.results;
       this.totalResults = 1000;
       console.log(data);
@@ -31,7 +31,12 @@ public page: number = 1;
   onPageChange(event: number): void {
     // this.pageChange.emit(event)
     this.page = event;
-       this.llenarData(this.page)
+       this.llenarData(this.page, this.selectedGenre)
+  }
+  onGenreChange(genreId: number) {
+    this.selectedGenre = genreId;
+    this.page = 1; // Reiniciar la página al cambiar el género
+    this.llenarData(this.page, this.selectedGenre)
   }
 
 }

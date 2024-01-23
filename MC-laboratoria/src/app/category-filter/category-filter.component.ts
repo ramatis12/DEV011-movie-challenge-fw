@@ -9,8 +9,9 @@ import { FilterMovieService } from '../service/filter-movie.service';
 export class CategoryFilterComponent {
   constructor(private sharedService: FilterMovieService) { }
 
+
   onCriteriaSelect(selectedCriteria: string): void {
     this.sharedService.setSelectedCriteria(selectedCriteria);
-  }
+     }
 
 }

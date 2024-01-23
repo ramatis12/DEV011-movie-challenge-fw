@@ -3,7 +3,7 @@
   <app-order-by></app-order-by>
 
   <ul>
-    <li class="background-card" *ngFor="let item of data| paginate: { itemsPerPage: pageSize, currentPage: page, totalItems: totalResults}">
+    <li class="background-card" *ngFor="let item of data| paginate: { itemsPerPage: 6, currentPage: page, totalItems: totalResults}">
         <img src="../../assets/background.jpg" class="background-img">
         <img src="{{'https://image.tmdb.org/t/p/w300' + item.poster_path}}" class="cinemaIMG"/>
         <span>{{item.title}}</span>
