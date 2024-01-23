@@ -20,11 +20,8 @@ export class APImovieService {
 
   constructor( private http: HttpClient) { } 
 
-  public getData(genreId: string) : Observable<any[]> {
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${this.apiKey}`,
-    });
-    return this.http.get<any[]>(this.urlApi, { headers: headers, params: { with_genres: genreId }});
+    public getData(page:number) : Observable<any> { 
+    return this.http.get<any>(`${this.urlApi}?api_key=${this.apiKeyG}&page=${page}`);
   }
   
 }
