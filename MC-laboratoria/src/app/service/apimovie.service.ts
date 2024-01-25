@@ -12,16 +12,23 @@ export class APImovieService {
   private apiKeyG = 'dfd7987871afc8f4f0a6ca88fbc01f10';
   private apiKey= 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZmQ3OTg3ODcxYWZjOGY0ZjBhNmNhODhmYmMwMWYxMCIsInN1YiI6IjY1N2E3ZjBkMzVhNjFlMDEzYWMyYmM2MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fHZyKVfaggDV8RJxFFhF5dEJExFddVoqq8ZXQXWXrAc';
 
+  private genreId: number = 0;
 
-  // discobery https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc 
-  // filtro https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc
-  // input https://api.themoviedb.org/3/movie/movie_id?language=en-US
-  // https://api.themoviedb.org/3/genre/movie/list?language=en
+  setGeneroSeleccionado(genero: number): void {
+    this.genreId = genero;
+  }
+
+  getGeneroSeleccionado(): number {
+    return this.genreId;
+  }
+
 
   constructor( private http: HttpClient) { } 
 
-    public getData(page:number, genreId:number) : Observable<any> { 
-    return this.http.get<any>(`${this.urlApi}?api_key=${this.apiKeyG}&page=${page}&with_genres=${genreId}`);
+    public getData(page:number) : Observable<any> { 
+      const genreId = this.getGeneroSeleccionado();
+      //console.log(genreId);
+    return this.http.get<any>(`${this.urlApi}?api_key=${this.apiKeyG}&page=${page}&genreId=${genreId}`);
   }
   
 }

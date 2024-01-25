@@ -19,24 +19,24 @@ public selectedGenre: number = 18;
   constructor(private apiService: APImovieService) { }
 
   ngOnInit(): void {
-    this.llenarData(this.page, this.selectedGenre);
+    this.llenarData(this.page);
   }
-  llenarData(page:number, selectedGenre:number){
-    this.apiService.getData(page, selectedGenre).subscribe((data) => {
+  llenarData(page:number){
+    this.apiService.getData(page).subscribe((data) => {
       this.data = data.results;
-      this.totalResults = 1000;
+      this.totalResults = 100;
       console.log(data);
     })
   }
   onPageChange(event: number): void {
     // this.pageChange.emit(event)
     this.page = event;
-       this.llenarData(this.page, this.selectedGenre)
+       this.llenarData(this.page)
   }
   onGenreChange(genreId: number) {
     this.selectedGenre = genreId;
     this.page = 1; // Reiniciar la página al cambiar el género
-    this.llenarData(this.page, this.selectedGenre)
+    this.llenarData(this.page)
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FilterMovieService } from '../service/filter-movie.service';
+import { APImovieService } from '../service/apimovie.service';
 
 @Component({
   selector: 'app-category-filter',
@@ -7,11 +8,20 @@ import { FilterMovieService } from '../service/filter-movie.service';
   styleUrls: ['./category-filter.component.css']
 })
 export class CategoryFilterComponent {
-  constructor(private sharedService: FilterMovieService) { }
+ 
+  constructor(private apiService: APImovieService) { }
 
+ 
+  selectedGenero: number= 0;
 
-  onCriteriaSelect(selectedCriteria: string): void {
-    this.sharedService.setSelectedCriteria(selectedCriteria);
-     }
+  onGeneroChange() {
+    // Envia el valor seleccionado al servicio
+    this.apiService.setGeneroSeleccionado(this.selectedGenero);
+    //console.log('Genero seleccionado:', this.selectedGenero);
+  }
+  // onGeneroChange() {
+  //   // Muestra el valor seleccionado en la consola
+  //   console.log(this.selectedGenero);
+  // }
 
 }
